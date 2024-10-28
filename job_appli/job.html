@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="job.css">
+    <script src="job.js"></script>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+    <form id="jobApplicationForm" onsubmit="return validateJobApplicationForm()">
+        <label for="name">Name <span style="color: red;">*</span>:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label>Educational Qualification<span style="color: red;">*</span>:</label>
+        <div class="radio-group">
+            <input type="radio" id="ssc" name="qualification" value="SSC" required>
+            <label for="ssc">SSC</label>
+            <input type="radio" id="inter" name="qualification" value="Inter" required>
+            <label for="inter">Inter</label>
+            <input type="radio" id="degree" name="qualification" value="Degree" required>
+            <label for="degree">Degree</label>
+        </div>
+        <br><br>
+        <label>Gender<span style="color: red;">*</span>:</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+        </div>
+        <br><br>
+        <label>Apply for <span style="color: red;">*</span>:</label>
+        <select id="applyFor" name="applyFor" required>
+            <option value="">Select a position</option>
+            <option value="Analyst">Analyst</option>
+            <option value="Developer">Developer</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Data Scientist">Data Scientist</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit Application</button>
+        <div id="errorMessage" style="color: red;"></div>
+    </form>
+</body>
+</html>
